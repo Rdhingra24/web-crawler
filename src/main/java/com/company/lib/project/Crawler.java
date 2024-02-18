@@ -30,6 +30,9 @@ public class Crawler implements Callable<PrintJobRequest> {
     @Override
     public PrintJobRequest call() {
         try{
+            if(!processingQueue.hasLinksToCrawl()){
+               return  new PrintJobRequest(null,null);
+            }
             CrawlRequest crawlRequest = processingQueue.getCrawlRequest();
             String targetUrl = crawlRequest.getUrl();
             long startTime = System.currentTimeMillis();

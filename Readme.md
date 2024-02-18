@@ -2,6 +2,24 @@ Web-Crawler Design
 ==================
 This is a simple web-crawler that can be used to crawl a website and find all the links in the website. The web-crawler is implemented in java and uses the JSoup library to parse the HTML content of the website.
 
+How to run
+----------
+**Prerequisite**: Java and Maven should be installed on the system.JAVA_HOME and MAVEN_HOME should be set in the environment variables.
+1. Clone the repository.
+2. Run the following command to build the project
+   ```shell
+   cd web-crawler
+   mvn clean install
+   ```
+   This creates a jar file in the target folder. `crawler-jar-with-dependencies.jar`
+3. Run the following command to run the jar file from your source directory.
+   ```shell
+   java -jar ./target/crawler-jar-with-dependencies.jar   "https://<url_placeholder>"
+   ```
+   Replace `<url_placeholder>` with the website you want to crawl.
+4. The result of the crawling process will be stored in `result.log` file in the root directory of the project - **web-crawler/logs**
+
+
 Components
 ------
 The web-crawler is implemented using the following classes:
@@ -10,6 +28,7 @@ The web-crawler is implemented using the following classes:
 3. **Crawler**: This is the class that crawls the website. It polls the queue for links to be crawled. It uses the JSoup library to parse the HTML content of the website and finds all the links in the website. 
 4. **Link**: This is a simple class that is used to represent a link in the website. It has a root URL and it's children.
 5. **Printer**: This class is responsible for printing the link objects passed to it. It polls the queue for links to be printed and prints the `toString()` implementation of model class.
+6. **Result.log**: contains the result of the crawling process.
 
 Flow
 ------
@@ -35,11 +54,16 @@ Design Decisions
     this.printQueue = new ConcurrentLinkedQueue<>();
    ```
 4. The project uses logging framework to redirect the logs to two separate files. One for the crawling logs and one for the printing logs. This is done to ensure that the printer logs and the crawling logs are separated and can be easily managed.
+5. **Scalability**: The application can be easily converted to scalable production-grade service by segregating crawling and printing jobs.  
+6. **Fault Tolerance**: The application can be made fault-tolerant by replacing in memory queues by a robust message broker like Kafka or RabbitMQ.
+7. **Resilience**: The application can be made resilient by adding a persistent storage to check point the crawling process. This means that if the crawling process is interrupted, the entire process will have to be restarted from the beginning. Ideally, there should be a mechanism to keep a track of visited links in a **_persistent storage/ cache for application to recover and resume from the last checkpoint._**
+
 
 Tradeoffs
 ---------
 1. The project is built using native java threads and concurrent data structures. This is done to keep the project simple and avoid the overhead of using a framework like Spring. However, this means that the project is not scalable and cannot be used to crawl large websites.
-However, in order to make application scalable, event driven would be a suitable approach. **_In memory queues would be replaced by a robust message broker like Kafka or RabbitMQ_.**
-2. The project is not using any persistent data storage to check point the crawling process. This means that if the crawling process is interrupted, the entire process will have to be restarted from the beginning. Ideally, there should be a mechanism to keep a track of visited links in a **_persistent storage/ cache for application to recover and resume from the last checkpoint._**
+However, in order to make application scalable, event driven would be a suitable approach. 
+2. The project is not using any persistent data storage to check point the crawling process. 
+3. There's no limit on depth of crawling. This can lead to long-running threads. A depth limit can be added to avoid this.
 
 All these decisions were made to keep the flow simple and to avoid the overhead of using a framework like Spring. However, these decisions can be revisited if the project is to be used in a production environment.

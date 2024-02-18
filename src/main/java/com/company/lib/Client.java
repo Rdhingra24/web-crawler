@@ -13,10 +13,11 @@ import java.util.concurrent.*;
 public class Client {
 
     public static void main(String[] args) throws InterruptedException {
+        long start = System.currentTimeMillis();
         QueueManager processingQueue = new QueueManager(10000);
 
         String inputUrl = args[0];
-        log.info("Input URL [{}]",inputUrl);
+        System.out.println("Input URL : "+inputUrl);
 
         CrawlRequest request = new CrawlRequest(inputUrl);
         processingQueue.addToCrawlQueue(request);
@@ -40,6 +41,7 @@ public class Client {
         crawlersPool.awaitTermination(5, TimeUnit.SECONDS);
        printerPool.awaitTermination(5, TimeUnit.SECONDS);
 
+        System.out.println("Process complete. Total time taken "+(System.currentTimeMillis()-start)/1000+" seconds");
         System.exit(0);
     }
 }
