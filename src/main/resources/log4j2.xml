@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="DEBUG">
+    <Appenders>
+        <File name="LogToFile" fileName="logs/app.log">
+            <PatternLayout>
+                <Pattern>%d %p %c{1.} [%t] %m%n</Pattern>
+            </PatternLayout>
+        </File>
+        <File name="LogToResultFile" fileName="logs/result.log">
+            <PatternLayout>
+                <Pattern>%d %p %c{1.} [%t] %m%n</Pattern>
+            </PatternLayout>
+        </File>
+    </Appenders>
+    <Loggers>
+        <!-- Logger configuration for "model" package -->
+        <Logger name="com.company.lib.project" level="info" additivity="false">
+            <AppenderRef ref="LogToFile"/>
+        </Logger>
+        <!-- Logger configuration for "print" package -->
+        <Logger name="com.company.lib.print" level="info" additivity="false">
+            <AppenderRef ref="LogToResultFile"/>
+        </Logger>
+        <!-- Root logger configuration -->
+        <Root level="error">
+            <AppenderRef ref="LogToFile"/>
+            <AppenderRef ref="LogToResultFile"/>
+        </Root>
+    </Loggers>
+</Configuration>

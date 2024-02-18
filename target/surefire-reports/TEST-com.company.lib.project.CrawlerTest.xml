@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.company.lib.project.CrawlerTest" time="0.799" tests="1" errors="0" skipped="0" failures="0">
+  <properties>
+    <property name="java.specification.version" value="17"/>
+    <property name="sun.jnu.encoding" value="UTF-8"/>
+    <property name="java.class.path" value="/Users/sonam/projects/web-crawler/target/test-classes:/Users/sonam/projects/web-crawler/target/classes:/Users/sonam/.m2/repository/org/jsoup/jsoup/1.15.4/jsoup-1.15.4.jar:/Users/sonam/.m2/repository/org/slf4j/slf4j-api/2.0.12/slf4j-api-2.0.12.jar:/Users/sonam/.m2/repository/org/projectlombok/lombok/1.18.30/lombok-1.18.30.jar:/Users/sonam/.m2/repository/com/github/crawler-commons/crawler-commons/1.4/crawler-commons-1.4.jar:/Users/sonam/.m2/repository/commons-io/commons-io/2.13.0/commons-io-2.13.0.jar:/Users/sonam/.m2/repository/org/apache/logging/log4j/log4j-api/2.20.0/log4j-api-2.20.0.jar:/Users/sonam/.m2/repository/org/apache/logging/log4j/log4j-core/2.20.0/log4j-core-2.20.0.jar:/Users/sonam/.m2/repository/org/apache/logging/log4j/log4j-slf4j2-impl/2.20.0/log4j-slf4j2-impl-2.20.0.jar:/Users/sonam/.m2/repository/org/mockito/mockito-core/4.11.0/mockito-core-4.11.0.jar:/Users/sonam/.m2/repository/net/bytebuddy/byte-buddy/1.12.19/byte-buddy-1.12.19.jar:/Users/sonam/.m2/repository/net/bytebuddy/byte-buddy-agent/1.12.19/byte-buddy-agent-1.12.19.jar:/Users/sonam/.m2/repository/org/objenesis/objenesis/3.3/objenesis-3.3.jar:/Users/sonam/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.9.2/junit-jupiter-engine-5.9.2.jar:/Users/sonam/.m2/repository/org/junit/platform/junit-platform-engine/1.9.2/junit-platform-engine-1.9.2.jar:/Users/sonam/.m2/repository/org/opentest4j/opentest4j/1.2.0/opentest4j-1.2.0.jar:/Users/sonam/.m2/repository/org/junit/platform/junit-platform-commons/1.9.2/junit-platform-commons-1.9.2.jar:/Users/sonam/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.9.2/junit-jupiter-api-5.9.2.jar:/Users/sonam/.m2/repository/org/apiguardian/apiguardian-api/1.1.2/apiguardian-api-1.1.2.jar:/Users/sonam/.m2/repository/org/mockito/mockito-inline/5.2.0/mockito-inline-5.2.0.jar:"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="java.vendor.url" value="https://java.oracle.com/"/>
+    <property name="user.timezone" value="Europe/London"/>
+    <property name="os.name" value="Mac OS X"/>
+    <property name="java.vm.specification.version" value="17"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="user.country" value="IN"/>
+    <property name="sun.boot.library.path" value="/Library/Java/JavaVirtualMachines/jdk-17.0.4.1.jdk/Contents/Home/lib"/>
+    <property name="sun.java.command" value="/Users/sonam/projects/web-crawler/target/surefire/surefirebooter2331153778684454017.jar /Users/sonam/projects/web-crawler/target/surefire 2024-02-18T20-41-26_955-jvmRun1 surefire4859924035609434898tmp surefire_013740452758180877490tmp"/>
+    <property name="http.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
+    <property name="jdk.debug" value="release"/>
+    <property name="surefire.test.class.path" value="/Users/sonam/projects/web-crawler/target/test-classes:/Users/sonam/projects/web-crawler/target/classes:/Users/sonam/.m2/repository/org/jsoup/jsoup/1.15.4/jsoup-1.15.4.jar:/Users/sonam/.m2/repository/org/slf4j/slf4j-api/2.0.12/slf4j-api-2.0.12.jar:/Users/sonam/.m2/repository/org/projectlombok/lombok/1.18.30/lombok-1.18.30.jar:/Users/sonam/.m2/repository/com/github/crawler-commons/crawler-commons/1.4/crawler-commons-1.4.jar:/Users/sonam/.m2/repository/commons-io/commons-io/2.13.0/commons-io-2.13.0.jar:/Users/sonam/.m2/repository/org/apache/logging/log4j/log4j-api/2.20.0/log4j-api-2.20.0.jar:/Users/sonam/.m2/repository/org/apache/logging/log4j/log4j-core/2.20.0/log4j-core-2.20.0.jar:/Users/sonam/.m2/repository/org/apache/logging/log4j/log4j-slf4j2-impl/2.20.0/log4j-slf4j2-impl-2.20.0.jar:/Users/sonam/.m2/repository/org/mockito/mockito-core/4.11.0/mockito-core-4.11.0.jar:/Users/sonam/.m2/repository/net/bytebuddy/byte-buddy/1.12.19/byte-buddy-1.12.19.jar:/Users/sonam/.m2/repository/net/bytebuddy/byte-buddy-agent/1.12.19/byte-buddy-agent-1.12.19.jar:/Users/sonam/.m2/repository/org/objenesis/objenesis/3.3/objenesis-3.3.jar:/Users/sonam/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.9.2/junit-jupiter-engine-5.9.2.jar:/Users/sonam/.m2/repository/org/junit/platform/junit-platform-engine/1.9.2/junit-platform-engine-1.9.2.jar:/Users/sonam/.m2/repository/org/opentest4j/opentest4j/1.2.0/opentest4j-1.2.0.jar:/Users/sonam/.m2/repository/org/junit/platform/junit-platform-commons/1.9.2/junit-platform-commons-1.9.2.jar:/Users/sonam/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.9.2/junit-jupiter-api-5.9.2.jar:/Users/sonam/.m2/repository/org/apiguardian/apiguardian-api/1.1.2/apiguardian-api-1.1.2.jar:/Users/sonam/.m2/repository/org/mockito/mockito-inline/5.2.0/mockito-inline-5.2.0.jar:"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="user.home" value="/Users/sonam"/>
+    <property name="user.language" value="en"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.version.date" value="2022-08-18"/>
+    <property name="java.home" value="/Library/Java/JavaVirtualMachines/jdk-17.0.4.1.jdk/Contents/Home"/>
+    <property name="file.separator" value="/"/>
+    <property name="basedir" value="/Users/sonam/projects/web-crawler"/>
+    <property name="java.vm.compressedOopsMode" value="Zero based"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="surefire.real.class.path" value="/Users/sonam/projects/web-crawler/target/surefire/surefirebooter2331153778684454017.jar"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
+    <property name="java.runtime.version" value="17.0.4.1+1-LTS-2"/>
+    <property name="user.name" value="sonam"/>
+    <property name="path.separator" value=":"/>
+    <property name="os.version" value="14.2.1"/>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="file.encoding" value="US-ASCII"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
+    <property name="localRepository" value="/Users/sonam/.m2/repository"/>
+    <property name="java.vendor.url.bug" value="https://bugreport.java.com/bugreport/"/>
+    <property name="java.io.tmpdir" value="/var/folders/hx/gf0cz2k53kx5w9kz26x_f0680000gn/T/"/>
+    <property name="idea.version" value="2022.2.1"/>
+    <property name="java.version" value="17.0.4.1"/>
+    <property name="user.dir" value="/Users/sonam/projects/web-crawler"/>
+    <property name="os.arch" value="aarch64"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="native.encoding" value="US-ASCII"/>
+    <property name="java.library.path" value="/Users/sonam/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:."/>
+    <property name="java.vm.info" value="mixed mode, sharing"/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="java.vm.version" value="17.0.4.1+1-LTS-2"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeBig"/>
+    <property name="socksNonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
+    <property name="java.class.version" value="61.0"/>
+  </properties>
+  <testcase name="testCrawl" classname="com.company.lib.project.CrawlerTest" time="0.791">
+    <system-out><![CDATA[DEBUG StatusConsoleListener Apache Log4j Core 2.20 initializing configuration XmlConfiguration[location=/Users/sonam/projects/web-crawler/target/classes/log4j2.xml]
+DEBUG StatusConsoleListener PluginManager 'Core' found 130 plugins
+DEBUG StatusConsoleListener PluginManager 'Level' found 0 plugins
+DEBUG StatusConsoleListener PluginManager 'Lookup' found 16 plugins
+DEBUG StatusConsoleListener Building Plugin[name=layout, class=org.apache.logging.log4j.core.layout.PatternLayout].
+DEBUG StatusConsoleListener PluginManager 'TypeConverter' found 26 plugins
+DEBUG StatusConsoleListener PatternLayout$Builder(pattern="%d %p %c{1.} [%t] %m%n", PatternSelector=null, Configuration(/Users/sonam/projects/web-crawler/target/classes/log4j2.xml), Replace=null, charset="null", alwaysWriteExceptions="null", disableAnsi="null", noConsoleNoAnsi="null", header="null", footer="null")
+DEBUG StatusConsoleListener PluginManager 'Converter' found 45 plugins
+DEBUG StatusConsoleListener Building Plugin[name=appender, class=org.apache.logging.log4j.core.appender.FileAppender].
+DEBUG StatusConsoleListener FileAppender$Builder(fileName="logs/app.log", append="null", locking="null", advertise="null", advertiseUri="null", createOnDemand="null", filePermissions="null", fileOwner="null", fileGroup="null", bufferedIo="null", bufferSize="null", immediateFlush="null", ignoreExceptions="null", PatternLayout(%d %p %c{1.} [%t] %m%n), name="LogToFile", Configuration(/Users/sonam/projects/web-crawler/target/classes/log4j2.xml), Filter=null, ={})
+DEBUG StatusConsoleListener Starting FileManager logs/app.log
+DEBUG StatusConsoleListener Building Plugin[name=layout, class=org.apache.logging.log4j.core.layout.PatternLayout].
+DEBUG StatusConsoleListener PatternLayout$Builder(pattern="%d %p %c{1.} [%t] %m%n", PatternSelector=null, Configuration(/Users/sonam/projects/web-crawler/target/classes/log4j2.xml), Replace=null, charset="null", alwaysWriteExceptions="null", disableAnsi="null", noConsoleNoAnsi="null", header="null", footer="null")
+DEBUG StatusConsoleListener Building Plugin[name=appender, class=org.apache.logging.log4j.core.appender.FileAppender].
+DEBUG StatusConsoleListener FileAppender$Builder(fileName="logs/result.log", append="null", locking="null", advertise="null", advertiseUri="null", createOnDemand="null", filePermissions="null", fileOwner="null", fileGroup="null", bufferedIo="null", bufferSize="null", immediateFlush="null", ignoreExceptions="null", PatternLayout(%d %p %c{1.} [%t] %m%n), name="LogToResultFile", Configuration(/Users/sonam/projects/web-crawler/target/classes/log4j2.xml), Filter=null, ={})
+DEBUG StatusConsoleListener Starting FileManager logs/result.log
+DEBUG StatusConsoleListener Building Plugin[name=appenders, class=org.apache.logging.log4j.core.config.AppendersPlugin].
+DEBUG StatusConsoleListener createAppenders(={LogToFile, LogToResultFile})
+DEBUG StatusConsoleListener Building Plugin[name=AppenderRef, class=org.apache.logging.log4j.core.config.AppenderRef].
+DEBUG StatusConsoleListener createAppenderRef(ref="LogToFile", level="null", Filter=null)
+DEBUG StatusConsoleListener Building Plugin[name=logger, class=org.apache.logging.log4j.core.config.LoggerConfig].
+DEBUG StatusConsoleListener LoggerConfig$Builder(additivity="false", level="INFO", levelAndRefs="null", name="com.company.lib.project", includeLocation="null", ={LogToFile}, ={}, Configuration(/Users/sonam/projects/web-crawler/target/classes/log4j2.xml), Filter=null)
+DEBUG StatusConsoleListener Building Plugin[name=AppenderRef, class=org.apache.logging.log4j.core.config.AppenderRef].
+DEBUG StatusConsoleListener createAppenderRef(ref="LogToResultFile", level="null", Filter=null)
+DEBUG StatusConsoleListener Building Plugin[name=logger, class=org.apache.logging.log4j.core.config.LoggerConfig].
+DEBUG StatusConsoleListener LoggerConfig$Builder(additivity="false", level="INFO", levelAndRefs="null", name="com.company.lib.print", includeLocation="null", ={LogToResultFile}, ={}, Configuration(/Users/sonam/projects/web-crawler/target/classes/log4j2.xml), Filter=null)
+DEBUG StatusConsoleListener Building Plugin[name=AppenderRef, class=org.apache.logging.log4j.core.config.AppenderRef].
+DEBUG StatusConsoleListener createAppenderRef(ref="LogToFile", level="null", Filter=null)
+DEBUG StatusConsoleListener Building Plugin[name=AppenderRef, class=org.apache.logging.log4j.core.config.AppenderRef].
+DEBUG StatusConsoleListener createAppenderRef(ref="LogToResultFile", level="null", Filter=null)
+DEBUG StatusConsoleListener Building Plugin[name=root, class=org.apache.logging.log4j.core.config.LoggerConfig$RootLogger].
+DEBUG StatusConsoleListener LoggerConfig$RootLogger$Builder(additivity="null", level="ERROR", levelAndRefs="null", includeLocation="null", ={LogToFile, LogToResultFile}, ={}, Configuration(/Users/sonam/projects/web-crawler/target/classes/log4j2.xml), Filter=null)
+DEBUG StatusConsoleListener Building Plugin[name=loggers, class=org.apache.logging.log4j.core.config.LoggersPlugin].
+DEBUG StatusConsoleListener createLoggers(={com.company.lib.project, com.company.lib.print, root})
+DEBUG StatusConsoleListener Configuration XmlConfiguration[location=/Users/sonam/projects/web-crawler/target/classes/log4j2.xml] initialized
+DEBUG StatusConsoleListener Starting configuration XmlConfiguration[location=/Users/sonam/projects/web-crawler/target/classes/log4j2.xml]
+DEBUG StatusConsoleListener Started configuration XmlConfiguration[location=/Users/sonam/projects/web-crawler/target/classes/log4j2.xml] OK.
+DEBUG StatusConsoleListener Shutting down OutputStreamManager SYSTEM_OUT.false.false-1
+DEBUG StatusConsoleListener OutputStream closed
+DEBUG StatusConsoleListener Shut down OutputStreamManager SYSTEM_OUT.false.false-1, all resources released: true
+DEBUG StatusConsoleListener Appender DefaultConsole-1 stopped with status true
+DEBUG StatusConsoleListener Stopped org.apache.logging.log4j.core.config.DefaultConfiguration@60099951 OK
+DEBUG StatusConsoleListener Registering MBean org.apache.logging.log4j2:type=531d72ca
+DEBUG StatusConsoleListener Registering MBean org.apache.logging.log4j2:type=531d72ca,component=StatusLogger
+DEBUG StatusConsoleListener Registering MBean org.apache.logging.log4j2:type=531d72ca,component=ContextSelector
+DEBUG StatusConsoleListener Registering MBean org.apache.logging.log4j2:type=531d72ca,component=Loggers,name=
+DEBUG StatusConsoleListener Registering MBean org.apache.logging.log4j2:type=531d72ca,component=Loggers,name=com.company.lib.project
+DEBUG StatusConsoleListener Registering MBean org.apache.logging.log4j2:type=531d72ca,component=Loggers,name=com.company.lib.print
+DEBUG StatusConsoleListener Registering MBean org.apache.logging.log4j2:type=531d72ca,component=Appenders,name=LogToFile
+DEBUG StatusConsoleListener Registering MBean org.apache.logging.log4j2:type=531d72ca,component=Appenders,name=LogToResultFile
+DEBUG StatusConsoleListener org.apache.logging.log4j.core.util.SystemClock supports precise timestamps.
+DEBUG StatusConsoleListener Reconfiguration complete for context[name=531d72ca] at URI /Users/sonam/projects/web-crawler/target/classes/log4j2.xml (org.apache.logging.log4j.core.LoggerContext@4c51cf28) with optional ClassLoader: null
+DEBUG StatusConsoleListener Shutdown hook enabled. Registering a new one.
+DEBUG StatusConsoleListener LoggerContext[name=531d72ca, org.apache.logging.log4j.core.LoggerContext@4c51cf28] started OK.
+]]></system-out>
+  </testcase>
+</testsuite>

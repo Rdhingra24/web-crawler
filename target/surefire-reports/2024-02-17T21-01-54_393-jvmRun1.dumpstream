@@ -1,0 +1,57 @@
+# Created at 2024-02-17T21:02:18.107
+TestSet has not finished before stream error has appeared >> initializing exit by non-null configuration: null
+java.io.EOFException
+	at java.base/java.io.DataInputStream.readInt(DataInputStream.java:398)
+	at org.apache.maven.surefire.booter.MasterProcessCommand.decode(MasterProcessCommand.java:115)
+	at org.apache.maven.surefire.booter.CommandReader$CommandRunnable.run(CommandReader.java:391)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+
+
+# Created at 2024-02-17T21:02:18.108
+Unexpected IOException with stream: DEBUG StatusConsoleListener Stopping LoggerContext[name=531d72ca, org.apache.logging.log4j.core.LoggerContext@75b3673]
+
+
+# Created at 2024-02-17T21:02:18.108
+Unexpected IOException with stream: DEBUG StatusConsoleListener Stopping LoggerContext[name=531d72ca, org.apache.logging.log4j.core.LoggerContext@75b3673]...
+
+
+# Created at 2024-02-17T21:02:18.110
+Unexpected IOException with stream: DEBUG StatusConsoleListener Shutting down FileManager logs/result.log
+
+
+# Created at 2024-02-17T21:02:18.111
+Unexpected IOException with stream: DEBUG StatusConsoleListener OutputStream closed
+
+
+# Created at 2024-02-17T21:02:18.111
+Unexpected IOException with stream: DEBUG StatusConsoleListener Shut down FileManager logs/result.log, all resources released: true
+
+
+# Created at 2024-02-17T21:02:18.111
+Unexpected IOException with stream: DEBUG StatusConsoleListener Appender LogToResultFile stopped with status true
+
+
+# Created at 2024-02-17T21:02:18.112
+Unexpected IOException with stream: DEBUG StatusConsoleListener Shutting down FileManager logs/app.log
+
+
+# Created at 2024-02-17T21:02:18.112
+Unexpected IOException with stream: DEBUG StatusConsoleListener OutputStream closed
+
+
+# Created at 2024-02-17T21:02:18.112
+Unexpected IOException with stream: DEBUG StatusConsoleListener Shut down FileManager logs/app.log, all resources released: true
+
+
+# Created at 2024-02-17T21:02:18.113
+Unexpected IOException with stream: DEBUG StatusConsoleListener Appender LogToFile stopped with status true
+
+
+# Created at 2024-02-17T21:02:18.113
+Unexpected IOException with stream: DEBUG StatusConsoleListener Stopped XmlConfiguration[location=/Users/sonam/projects/practice/web-crawler/target/classes/log4j2.xml] OK
+
+
+# Created at 2024-02-17T21:02:18.113
+Unexpected IOException with stream: DEBUG StatusConsoleListener Stopped LoggerContext[name=531d72ca, org.apache.logging.log4j.core.LoggerContext@75b3673] with status true
+
+
