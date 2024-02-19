@@ -53,18 +53,17 @@ public class Helper {
 
 
     //get robots.txt and read the content of the page
-    String getRobotTxt(String url){
+    String getRobotTxt(String url) throws MalformedURLException {
         String urlStr = url+"/robots.txt";
         StringBuilder content = new StringBuilder();
-        try {
-            URL urlObj = new URL(urlStr);
-            BufferedReader in = new BufferedReader(new InputStreamReader(urlObj.openStream()));
+        URL urlObj = new URL(urlStr);
+
+        try (BufferedReader in = new BufferedReader(new InputStreamReader(urlObj.openStream()))){;
             String line;
             while ((line = in.readLine()) != null) {
                 content.append(line);
                 content.append(System.lineSeparator());
             }
-            in.close();
         } catch (IOException e) {
             log.error("Error in reading robots.txt file", e);
         }

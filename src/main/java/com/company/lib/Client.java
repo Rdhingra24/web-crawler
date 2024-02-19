@@ -16,7 +16,7 @@ public class Client {
         validateInput(args);
 
         long start = System.currentTimeMillis();
-        QueueManager processingQueue = new QueueManager(10000);
+        QueueManager processingQueue = new QueueManager();
 
         String inputUrl = args[0];
         System.out.println("Input URL : "+inputUrl);
@@ -33,6 +33,7 @@ public class Client {
                 PrintJobRequest elements = future.get();
                 processingQueue.submitPrintJobToQueue(elements);
             } catch (InterruptedException | ExecutionException e) {
+                Thread.currentThread().interrupt();
                 log.error("Exception while reading message from queue [{}]",e);
                 e.printStackTrace();
             }

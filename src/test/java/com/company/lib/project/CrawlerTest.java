@@ -13,7 +13,7 @@ import java.io.IOException;
 import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.*;
 
-public class CrawlerTest {
+class CrawlerTest {
     private QueueManager queueManager;
     private Crawler crawler;
     String url =null;
@@ -21,7 +21,7 @@ public class CrawlerTest {
 
     @BeforeEach
     public void setup() {
-        queueManager = new QueueManager(1) ;
+        queueManager = new QueueManager() ;
         url = "http://test.com";
         CrawlRequest request = new CrawlRequest(url);
         uuid = request.getUuid();
@@ -30,7 +30,7 @@ public class CrawlerTest {
     }
 
     @Test
-    public void testCrawl() throws IOException {
+    void testCrawl() throws IOException {
         File file = TestUtils.getFile("crawlerTest/index.html");
         Document content = Jsoup.parse(file, "UTF-8","http://test.com");
 

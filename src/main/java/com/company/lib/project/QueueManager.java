@@ -28,7 +28,7 @@ public class QueueManager {
 
 
 
-    public QueueManager(int capacity){
+    public QueueManager(){
         this.crawlQueue =  new ConcurrentLinkedQueue<>();
         this.printQueue = new ConcurrentLinkedQueue<>();
     }

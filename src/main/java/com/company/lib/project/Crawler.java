@@ -19,6 +19,7 @@ import static com.company.lib.project.Helper.*;
  */
 @Slf4j
 public class Crawler implements Callable<PrintJobRequest> {
+    public static final String MINUS_ONE = "minus one";
     private final QueueManager processingQueue;
     public Crawler(QueueManager queue){
         this.processingQueue = queue;
@@ -49,7 +50,7 @@ public class Crawler implements Callable<PrintJobRequest> {
 
     public Link crawl(String url) throws IOException {
         if(!Helper.isValidUrl(url)){
-            log.info("minus one");
+            log.info(MINUS_ONE);
 
             log.error("Invalid URL provided [{}]",url);
             throw new IOException("Invalid URL provided");
