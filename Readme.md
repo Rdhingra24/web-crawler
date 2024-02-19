@@ -2,9 +2,20 @@ Web-Crawler
 ===========
 This is a simple web-crawler that can be used to crawl a website and find all the links in the website. The web-crawler is implemented in java and uses the JSoup library to parse the HTML content of the website.
 
+Table of Contents
+-----------------
+- [How to run](#how-to-run)
+  * [**Using Docker**:](#using-docker)
+  * [**Using java and maven**:](#using-java-and-maven)
+- [Components](#components)
+- [Flow](#flow)
+- [Design](#design)
+- [Design Decisions](#design-decisions)
+- [Tradeoffs](#tradeoffs)
+
 How to run
 ----------
-### **Using Docker**:
+### **Docker**:
 **Linux** image has been pushed to docker hub already.
 1. Create a directory to store logs to a persistent storage. 
    ```shell
@@ -17,7 +28,7 @@ How to run
 3. The result of the crawling process will be stored in `result.log` file in the directory of mounted volume of the project - **/tmp/web-crawler/logs**
 
 
-### **Using java and maven**:
+### **Java and maven**:
 
 **Prerequisite**: Java and Maven(optional if using jar directly) should be installed on the system.
 1. Clone the repository.
