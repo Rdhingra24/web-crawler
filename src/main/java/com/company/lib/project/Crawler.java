@@ -77,13 +77,12 @@ public class Crawler implements Callable<PrintJobRequest> {
         return null;
     }
 
-    private void submitCrawlJobToQueue(Set<String> link, String baseUrl) {
-        for (String s : link) {
-            if(Helper.sameDomain(s,baseUrl) && isUrlAllowed(s)){
-                log.debug("Trying to add child link to queue [{}]",s);
-                CrawlRequest request = new CrawlRequest(s);
-                processingQueue.addToCrawlQueue(request);
-            }
-        }
+    private void submitCrawlJobToQueue(Set<String> links, String baseUrl) {
+        links.stream()
+                .filter(link -> sameDomain(link, baseUrl) && isUrlAllowed(link))
+                .forEach(link -> {
+                    log.debug("Adding child link to queue: [{}]", link);
+                    processingQueue.addToCrawlQueue(new CrawlRequest(link));
+                });
     }
 }
