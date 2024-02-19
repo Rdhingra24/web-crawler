@@ -5,6 +5,7 @@ This is a simple web-crawler that can be used to crawl a website and find all th
 How to run
 ----------
 ### **Using Docker**:
+**Linux** image has been pushed to docker hub already.
 1. Create a directory to store logs to a persistent storage. 
    ```shell
    mkdir -p /tmp/web-crawler/logs
