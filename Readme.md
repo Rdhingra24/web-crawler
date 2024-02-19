@@ -10,9 +10,9 @@ How to run
    ```shell
    mkdir -p /tmp/web-crawler/logs
    ```
-2. Use the following command to run docker container providing URL as an argument.
+2. Use the following command to run docker container providing URL as an argument. Replace https://crawler-test.com/ with your input.
    ```shell
-   docker run -it --rm  -v /tmp/web-crawler/logs:/logs robinadhingra/crawler:latest <input_url>
+   docker run -it --rm  -v /tmp/web-crawler/logs:/logs robinadhingra/crawler:latest https://crawler-test.com/
    ```
 3. The result of the crawling process will be stored in `result.log` file in the directory of mounted volume of the project - **/tmp/web-crawler/logs**
 
