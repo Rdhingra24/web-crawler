@@ -13,6 +13,8 @@ import java.util.concurrent.*;
 public class Client {
 
     public static void main(String[] args) throws InterruptedException {
+        validateInput(args);
+
         long start = System.currentTimeMillis();
         QueueManager processingQueue = new QueueManager(10000);
 
@@ -21,7 +23,6 @@ public class Client {
 
         CrawlRequest request = new CrawlRequest(inputUrl);
         processingQueue.addToCrawlQueue(request);
-
 
         ExecutorService crawlersPool = Executors.newFixedThreadPool(100);
         ExecutorService printerPool = Executors.newFixedThreadPool(100);
@@ -43,5 +44,12 @@ public class Client {
 
         System.out.println("Process complete. Total time taken "+(System.currentTimeMillis()-start)/1000+" seconds");
         System.exit(0);
+    }
+
+    private static void validateInput(String[] args) {
+        if(args.length == 0){
+            System.out.println("Please provide a URL to start crawling");
+            System.exit(1);
+        }
     }
 }

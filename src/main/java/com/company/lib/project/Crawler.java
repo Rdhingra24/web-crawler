@@ -14,15 +14,12 @@ import java.util.concurrent.ConcurrentHashMap;
 import static com.company.lib.project.Helper.*;
 
 /**
- * This class is responsible for reading queue for given URl and extracts child links from there.
- * It also submits the child links to the queue for further crawling.
- * It's a Callable object so that it can return the result of the processing and that result can go to the output queue.
+ * Responsible for reading the queue for a given URL, extracting child links,
+ * and submitting them for further crawling.
  */
 @Slf4j
 public class Crawler implements Callable<PrintJobRequest> {
     private final QueueManager processingQueue;
-
-
     public Crawler(QueueManager queue){
         this.processingQueue = queue;
     }
@@ -36,9 +33,13 @@ public class Crawler implements Callable<PrintJobRequest> {
             CrawlRequest crawlRequest = processingQueue.getCrawlRequest();
             String targetUrl = crawlRequest.getUrl();
             long startTime = System.currentTimeMillis();
+
             log.info("picked request [{}] from queue to crawl",crawlRequest.getUuid(),targetUrl);
             Link link = crawl(targetUrl);
-            log.info("picked request [{}] completed. took [{}] ms",crawlRequest.getUuid(), System.currentTimeMillis()-startTime);
+
+            long duration = System.currentTimeMillis() - startTime;
+            log.info("picked request [{}] completed. took [{}] ms",crawlRequest.getUuid(), duration);
+
             return new PrintJobRequest(link,crawlRequest.getUuid());
         } catch (IOException e) {
             log.error("Exception while reading message from queue [{}]",e);
