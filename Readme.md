@@ -5,13 +5,13 @@ This is a simple web-crawler that can be used to crawl a website and find all th
 How to run
 ----------
 ### **Using Docker**:
-1. create a directory to store logs to a persistent storage. 
+1. Create a directory to store logs to a persistent storage. 
    ```shell
    mkdir -p /tmp/web-crawler/logs
    ```
 2. Use the following command to run docker container providing URL as an argument.
    ```shell
-   docker run -it --rm  -v /tmp/web-crawler/logs:/logs crawler:latest
+   docker run -it --rm  -v /tmp/web-crawler/logs:/logs robinadhingra/crawler:latest <input_url>
    ```
 3. The result of the crawling process will be stored in `result.log` file in the directory of mounted volume of the project - **/tmp/web-crawler/logs**
 
